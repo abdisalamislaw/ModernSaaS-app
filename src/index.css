@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 99 102 241;
+    --color-secondary: 240 249 255;
+    --color-accent: 6 182 212;
+  }
+  
+  body {
+    @apply bg-gray-900 text-gray-100 font-inter;
+  }
+}
+
+@layer components {
+  .cyber-input {
+    @apply w-full bg-gray-800/50 border border-teal-500/30 rounded-md px-4 py-2 text-teal-400 
+    placeholder:text-teal-400/50 focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400
+    transition-all duration-200;
+  }
+
+  .cyber-button {
+    @apply px-6 py-2 bg-teal-500/10 border border-teal-400/30 rounded-md text-teal-400 
+    hover:bg-teal-400/20 hover:border-teal-400/50 transition-all duration-200
+    focus:outline-none focus:ring-2 focus:ring-teal-400/50;
+  }
+
+  .cyber-card {
+    @apply bg-gray-800/50 border border-teal-500/30 rounded-lg p-6 
+    backdrop-blur-sm shadow-lg shadow-teal-500/10;
+  }
+
+  .cyber-title {
+    @apply text-3xl font-bold text-teal-400 mb-6;
+  }
+}
+
+.glow {
+  text-shadow: 0 0 10px theme('colors.teal.400');
+}
+
+/* Add smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add custom font */
+@font-face {
+  font-family: 'Inter';
+  src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+}
